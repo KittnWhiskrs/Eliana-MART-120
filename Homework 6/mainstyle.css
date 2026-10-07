@@ -1,0 +1,38 @@
+
+
+.forestgump{
+    color:teal;
+    font-family:fantasy;
+    font-size:20px;}
+#GREEN{
+    color:rgb(0, 80, 31);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:15px;}
+
+
+
+
+body{
+    background-color: rgb(237, 249, 212);}
+
+a{
+    color:rgb(0, 173, 165);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:15px;}
+li{
+    color:rgb(0, 80, 31);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:15px;}
+
+ol{
+    color:rgb(0, 80, 31);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:15px;}
+
+h3{
+    color:teal;
+    font-family:fantasy;
+    letter-spacing:1px;
+    font-size:20px;
+    text-decoration:none}
+
