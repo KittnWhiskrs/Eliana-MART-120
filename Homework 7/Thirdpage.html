@@ -1,0 +1,114 @@
+<html>
+
+     <head>
+        <title>My Third Page</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+        <style>
+         body {margin-left: 0.5in; margin-right: 0.5in; margin-top: 0.5in; margin-bottom: 1in}
+        </style>
+       
+        <script>
+
+            
+            function checkboxes(){
+                var firstname = document.getElementById("fname").value;
+                if(firstname == ""){
+                    document.getElementById("fname").style.backgroundColor = "red";
+                    document.getElementById("fname").focus();
+                    
+                }
+
+                var lastname = document.getElementById("lname").value;
+                if(lastname == ""){
+                    document.getElementById("lname").style.backgroundColor = "red";
+                    document.getElementById("lname").focus();
+                }
+
+                var email = document.getElementById("address").value;
+                if(email == ""){
+                    document.getElementById("address").style.backgroundColor = "red";
+                    document.getElementById("address").focus();
+                }
+
+            }
+
+            
+            function checkradio(){
+                var accept = document.getElementById("accept").checked;
+                var reject = document.getElementById("reject").checked;
+                if(accept == false && reject == false){
+                    window.alert("You must select either accept or reject the terms and conditions");
+                    document.body.style.backgroundImage = "url('CreepyHands.webp')";
+                    document.body.style.backgroundRepeat = "no-repeat";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.color = "white";
+                    document.body.style.textAlign = "center";
+                }
+            }
+
+        </script>
+            
+        
+        
+    </head>
+
+     <body>
+        <h1 style="font-size: 45px; font-family:Garamond; text-decoration: underline">Contact Us!</h1>
+        <br/>
+        <h3>Personal Information:</h3>
+        <br/>
+
+
+
+        <form action="Thirdpage.html" type="Post">
+
+            First Name: <input type="text" id="fname" required>
+            <br/>
+            Last Name: <input type="text" id="lname" required>
+            <br/>
+            Email Address: <input type="text" id="address" required><br>
+            <br/>
+
+            <h3>Terms and Conditions</h3>
+            <br/>
+            Do you accept the terms and conditions?
+            <br/>
+            Upon accepting a group of 4 random men will show up to your house to steal your liver, (this is immediate)
+            <br/>
+            all of your personal data will be sold to places. What places? We don't actually know! It's a surprise :)
+            <br/>
+            And you may experience extreme nausia or even death.
+            <br/>
+            <br/>
+            <input type="radio" name="Terms" value="accept" id="accept" required>Accept
+            <br/>
+            <input type="radio" name="Terms" value="reject" id="reject" required>Reject
+            <br/>
+            <br/>
+            <br/>
+            <input type="button" name="Submit" value="Submit" onclick="checkboxes(); checkradio();">
+
+        </form>
+
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+
+
+        <p>
+        <a href="Homepage.html" target="_new">go back to home page</a>
+        <br/>
+        <a href="Secondpage.html" target="_new">go to second page</a>
+        <br/>
+        </p>
+    </body>
+
+</html>
