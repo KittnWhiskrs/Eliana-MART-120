@@ -19,9 +19,20 @@ var canvasy = 600
 //exit relevant dimensions
 var exitY = 60
 
+//obtacle properties
+var obstacleAX = 500;
+var obstacleAY = 100;
+var obstacleBX = 90;
+var obstacleBY = 350;
+var obstacleXSpeed;
+var obstacleYSpeed;
+
 
 function setup(){
     createCanvas(canvasx, canvasy);
+
+    obstacleXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    obstacleYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
 }
 
 
@@ -46,11 +57,55 @@ function draw(){
     fill(200, 0, 0);
     stroke(80, 0, 0);
     strokeWeight(3);
-    circle(500, 100, 50);
+    circle(obstacleAX, obstacleAY, 50);
 
     fill(255, 102, 0);
     stroke(170, 20, 0);
-    circle(90, 350, 150);
+    circle(obstacleBX, obstacleBY, 150);
+
+
+    // Obstacle movement
+    obstacleAX += obstacleXSpeed;
+    obstacleAY += obstacleYSpeed;
+    obstacleBX += obstacleXSpeed;
+    obstacleBY += obstacleYSpeed;
+
+    // Obstacle bounds
+    if(obstacleAX > canvasx){
+        obstacleAX = 0;
+    }
+
+    if(obstacleAX < 0){
+        obstacleAX = canvasx;
+    }
+
+    if(obstacleBX > canvasx){
+        obstacleBX = 0;
+    }
+
+    if(obstacleBX < 0){
+        obstacleBX = canvasx;
+    }
+
+    if(obstacleAY > canvasy){
+        obstacleAY = 0;
+    }
+
+     if(obstacleAY < 0){
+        obstacleAY = canvasy;
+    }
+
+    if(obstacleBY > canvasy){
+        obstacleBY = 0;
+    }
+
+     if(obstacleBY < 0){
+        obstacleBY = canvasy;
+    }
+
+
+
+
 
     // Mouse obstacle
     fill(0);
